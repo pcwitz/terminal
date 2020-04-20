@@ -12,47 +12,28 @@ const Usage = () => {
   };
   return (
     <pre style={styles}>{`
-usage: pcwitz [--version] [--help] [-C <path>] [-c <name>=<value>]
-           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
-           [-p | --paginate | --no-pager] [--no-replace-objects] [--bare]
-           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
-           <command> [<args>]
+usage: pcwitz [--version] [--help]
+              [-b | --bio] [-e | --edu]
+              [-x | --experience] [-p | --projects]
+              [-t | --tech]
 
-These are common Git commands used in various situations:
+These are common pcwitz commands used in various situations:
 
-start a working area (see also: git help tutorial)
-   clone      Clone a repository into a new directory
-   init       Create an empty Git repository or reinitialize an existing one
+need to know who is Perry Abramowitz
+   bio          Biography
 
-work on the current change (see also: git help everyday)
-   add        Add file contents to the index
-   mv         Move or rename a file, a directory, or a symlink
-   reset      Reset current HEAD to the specified state
-   rm         Remove files from the working tree and from the index
+discover where Perry Abramowitz has learned and worked
+   edu          Educational milestones
+   experience   Work experience past to present
 
-examine the history and state (see also: git help revisions)
-   bisect     Use binary search to find the commit that introduced a bug
-   grep       Print lines matching a pattern
-   log        Show commit logs
-   show       Show various types of objects
-   status     Show the working tree status
+list Web projects highlighting Perry's development skills
+   projects     Projects and accomplishments 
 
-grow, mark and tweak your common history
-   branch     List, create, or delete branches
-   checkout   Switch branches or restore working tree files
-   commit     Record changes to the repository
-   diff       Show changes between commits, commit and working tree, etc
-   merge      Join two or more development histories together
-   rebase     Reapply commits on top of another base tip
-   tag        Create, list, delete or verify a tag object signed with GPG
+view technologies Perry works with and 
+   tech         Technology stack used to build software applications
 
-collaborate (see also: git help workflows)
-   fetch      Download objects and refs from another repository
-   pull       Fetch from and integrate with another repository or a local branch
-   push       Update remote refs along with associated objects
-
-'git help -a' and 'git help -g' list available subcommands and some
-concept guides. See 'git help <command>' or 'git help <concept>'
+'pcwitz help -a' and 'pcwitz help -g' list available subcommands and some
+concept guides. See 'pcwitz help <command>' or 'pcwitz help <concept>'
 to read about a specific subcommand or concept.`}</pre>
   );
 };
