@@ -1,21 +1,23 @@
 import React, { FormEvent, useState } from "react";
 
 interface IProps {
-  execute: (command: string) => void;
+  command: string;
+  execute: () => void;
+  setCommand: (command: string) => void;
 }
 
-const Input = ({ execute }: IProps) => {
-  const [command, setCommand] = useState("");
+const Input = ({ command, execute, setCommand }: IProps) => {
   const submit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    execute(command);
+    execute();
   };
 
   return (
-    <form onSubmit={submit}>
+    <form className="flex-1" onSubmit={submit}>
       <input
         autoComplete="off"
-        className="flex-1 input"
+        autoFocus
+        className="input"
         onChange={(event) => setCommand(event.target.value)}
         spellCheck="false"
         value={command}
